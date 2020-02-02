@@ -13,6 +13,6 @@ setup(
         'tqdm>=4.36.1,<5',
         'hyperopt>=0.1,<0.2'
     ],
-    tests_require=['nose'],
+    tests_require=['nose', 'python-coveralls'],
     test_suite='nose.collector'
 )
