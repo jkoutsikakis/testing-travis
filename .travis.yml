@@ -1,9 +1,6 @@
 language: python
 python:
-- '3.5'
 - '3.6'
-- '3.7'
-- '3.8'
 install:
 - pip install .
 script:
@@ -12,10 +9,10 @@ after_success:
 - coveralls
 deploy:
   provider: pypi
+  server: https://test.pypi.org/simple/
   user: "__token__"
   password:
     secure: W21qvTE/YH5KlZMPG/BoElIa6cH2eXl6JEiGu5mZwH6QrcJZDjrj0QZlvOE6csRRiBm5YXnxFS07fDX5n91yS68pQ1e2LcHKq+5j413eyfTzgrFjvX/y+2nk9vrJvYKgade+fc23B52tI49s+VaNTFRmdb1V5bUjkupz703NTNtHUXIiK+teh+FqLUMRO9R+oeceq8PZT5dHtBFfmhXlkoxOWNWMa5gbIi7qzmIqfr5iORgEcBdI38206fGy/UE0F3oZMkSdGPDGl0CiY/QiZuXCv8+BK7O9f/CevVijzuLHEvPveO004ED2spmsIhJunnDmQ3RHcbC6rYMqNZKcIKFqT0LQHKuyscnGopg8QvB6lFRBtmq2s6iw5vhrnUl645U26wR/oqJXbePrHcgaf1eEvRBfe05gDhKB8C4a455NCsX5TloHbZTYCDRWo6ayw6gVn2wBqhwaGYQP6WnniATOocrPqmnWdskdkbmuRt9MtfOy8J+CGDpUKjKM+U27M2LQml11nTuBFJsqUnwZB3rr0FJOALxtqu3V24XmuVjDtb3lcBPSHMb6fLNu3mKk7Lf1HNtlYaJuX42vVa+XfSs8G76+EhU7nEPStLPkXqzufqWgkahIMtb8FgGv/N/h/TYvtOnA/d0yiYazqDwuuq8f4z8/B4fDlwZukWLWV+M=
   on:
     tags: true
     branch: master
-    server: https://test.pypi.org/simple/
