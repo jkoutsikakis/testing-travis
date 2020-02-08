@@ -3,7 +3,7 @@ branches:
   only:
     - master
     - develop
-    - /v\d+\.\d+\.\d+\./
+    - /v\d+\.\d+\.\d+/
 python:
 - '3.6'
 install:
