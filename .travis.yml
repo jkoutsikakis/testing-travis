@@ -3,21 +3,21 @@ branches:
   only:
     - master
     - develop
-    - /v\d+\.\d+\.\d+/
+    - "/v\\d+\\.\\d+\\.\\d+/"
 python:
-- '3.6'
+  - '3.6'
 install:
-- pip install .
+  - pip install .
 script:
-- nosetests
+  - nosetests
 after_success:
-- coveralls
+  - coveralls
 deploy:
   provider: pypi
   server: https://test.pypi.org/legacy/
-  user: "__token__"
+  user: __token__
   password:
-    secure: W21qvTE/YH5KlZMPG/BoElIa6cH2eXl6JEiGu5mZwH6QrcJZDjrj0QZlvOE6csRRiBm5YXnxFS07fDX5n91yS68pQ1e2LcHKq+5j413eyfTzgrFjvX/y+2nk9vrJvYKgade+fc23B52tI49s+VaNTFRmdb1V5bUjkupz703NTNtHUXIiK+teh+FqLUMRO9R+oeceq8PZT5dHtBFfmhXlkoxOWNWMa5gbIi7qzmIqfr5iORgEcBdI38206fGy/UE0F3oZMkSdGPDGl0CiY/QiZuXCv8+BK7O9f/CevVijzuLHEvPveO004ED2spmsIhJunnDmQ3RHcbC6rYMqNZKcIKFqT0LQHKuyscnGopg8QvB6lFRBtmq2s6iw5vhrnUl645U26wR/oqJXbePrHcgaf1eEvRBfe05gDhKB8C4a455NCsX5TloHbZTYCDRWo6ayw6gVn2wBqhwaGYQP6WnniATOocrPqmnWdskdkbmuRt9MtfOy8J+CGDpUKjKM+U27M2LQml11nTuBFJsqUnwZB3rr0FJOALxtqu3V24XmuVjDtb3lcBPSHMb6fLNu3mKk7Lf1HNtlYaJuX42vVa+XfSs8G76+EhU7nEPStLPkXqzufqWgkahIMtb8FgGv/N/h/TYvtOnA/d0yiYazqDwuuq8f4z8/B4fDlwZukWLWV+M=
+    secure: X0NI+Wo08PnAqiVMyApGOsmmZW+IMPde2ywcmQUezdGfVnVVkVoK1kAfLlKlQpr/wGDEVexn+NRNybTUXlZ/dl+nR87f/lHOeAXXD/Hqs0yPWnT0tiyTce9fJ3qSWlEBuVZxfllBk3Mg2EodDX6SKa2iYlTZTmt/jmUqsEI9DE1jBi6AK8mvbssxgPjvYszHPqdt/qJ8zpQHIdYKikM1Kt1mJkQcJUbCOc9yPfy22Ml8B8l1wsfU2vx1MG9MYpTq2yPtW0Uz3+xkf8xomPTESHwd/1wWvzWB0g2HPb+FdsO51fLW/GK29ds5bAXV5mJNuWWuX6Cz7NdrDwIALBSXKRGi3u9FQ3VcDmAjRdtTw3V2hhNmGykW//kHugJlJqXAEPfyj1XH/bmVs3urXcT/uJYP00D5Id4bLgAjVjaeaXnUKevLi5Buj0/atxBpkR1hwQuT2CPoy/2BmpOkAWY1Zmcny2B05uGC5eI1zbflsRY9LyBzvdcQD9HzBZHIeNGyH8d7Be+Cin8n8Rc5mnwr5KDwnBVwkmkHlb2bECiOorFKI96NK51pJuoVS9eX/gvbxoCLSjEZHFQR6wjdTs2FxMF8odePS3ppw5IxQ/js4OdFBjCzji+R4kGQsm9hcECqggtvhv7q28OSYHfPn77waxypaERKC/oWy5nh5/4j4b0=
   on:
     tags: true
     branch: master
