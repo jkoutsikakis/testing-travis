@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='testing-travis',
-    version='0.0.52',
+    version='0.0.53',
     description='testing_travis',
     packages=find_packages(exclude=['tests']),
     author='John Koutsikakis',
